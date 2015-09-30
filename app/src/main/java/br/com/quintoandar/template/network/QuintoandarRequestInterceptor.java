@@ -1,8 +1,8 @@
-package com.company.templateapplication.network;
+package br.com.quintoandar.template.network;
 
 import retrofit.RequestInterceptor;
 
-public class OrganizationRequestInterceptor implements RequestInterceptor {
+public class QuintoandarRequestInterceptor implements RequestInterceptor {
 
     @Override
     public void intercept(retrofit.RequestInterceptor.RequestFacade request) {

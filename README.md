@@ -14,6 +14,7 @@ cookiecutter https://github.com/quintoandar/cookiecutter-android
 #### Batteries Included
 
 * [Retrolambda](https://github.com/orfjackal/retrolambda) & [Lightweight Stream](https://github.com/aNNiMON/Lightweight-Stream-API) bring the Java 8 streams and lambda to Java 7.
+* [Lombok](https://projectlombok.org/) eliminate all boilerplate.
 * [RoboSpice](https://github.com/stephanenicolas/robospice) for handling long async requests and other goodies, see the [infographic](https://i.imgur.com/okb3rlz.jpg).
 * [Retrofit](https://square.github.io/retrofit/) a type-safe HTTP client for Android.
 * [OkHttp](https://square.github.io/okhttp/) an HTTP & SPDY client for Android used by Retrofit.

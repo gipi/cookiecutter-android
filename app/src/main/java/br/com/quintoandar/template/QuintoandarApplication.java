@@ -1,20 +1,20 @@
-package com.company.templateapplication;
+package br.com.quintoandar.template;
 
 import android.app.Application;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.company.templateapplication.core.CrashReportingTree;
-import com.company.templateapplication.di.component.ApplicationComponent;
-import com.company.templateapplication.di.component.DaggerApplicationComponent;
-import com.company.templateapplication.di.module.ApplicationModule;
+import br.com.quintoandar.template.core.CrashReportingTree;
+import br.com.quintoandar.template.di.component.ApplicationComponent;
+import br.com.quintoandar.template.di.component.DaggerApplicationComponent;
+import br.com.quintoandar.template.di.module.ApplicationModule;
 import com.orhanobut.hawk.Hawk;
 import com.orhanobut.hawk.HawkBuilder;
 
 import timber.log.Timber;
 import timber.log.Timber.DebugTree;
 
-public class OrganizationApplication extends Application {
+public class QuintoandarApplication extends Application {
 
     private ApplicationComponent component;
 
@@ -40,7 +40,7 @@ public class OrganizationApplication extends Application {
         return component;
     }
 
-    public static OrganizationApplication from(@NonNull Context context) {
-        return (OrganizationApplication) context.getApplicationContext();
+    public static QuintoandarApplication from(@NonNull Context context) {
+        return (QuintoandarApplication) context.getApplicationContext();
     }
 }

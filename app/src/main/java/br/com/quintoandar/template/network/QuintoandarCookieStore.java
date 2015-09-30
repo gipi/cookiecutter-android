@@ -1,4 +1,4 @@
-package com.company.templateapplication.network;
+package br.com.quintoandar.template.network;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.orhanobut.hawk.Hawk;
@@ -9,9 +9,9 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrganizationCookieStore implements CookieStore {
+public class QuintoandarCookieStore implements CookieStore {
 
-    private final static String TAG = OrganizationCookieStore.class.getSimpleName();
+    private final static String TAG = QuintoandarCookieStore.class.getSimpleName();
 
     @Override
     public void add(URI uri, HttpCookie httpCookie) {

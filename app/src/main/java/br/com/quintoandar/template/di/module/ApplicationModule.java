@@ -1,21 +1,22 @@
-package com.company.templateapplication.di.module;
+package br.com.quintoandar.template.di.module;
 
 import android.content.Context;
 
-import com.company.templateapplication.OrganizationApplication;
+import br.com.quintoandar.template.QuintoandarApplication;
 import com.squareup.otto.Bus;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import io.realm.Realm;
 
 @Module
 public class ApplicationModule {
 
-    private final OrganizationApplication application;
+    private final QuintoandarApplication application;
 
-    public ApplicationModule(OrganizationApplication application) {
+    public ApplicationModule(QuintoandarApplication application) {
         this.application = application;
     }
 
@@ -29,5 +30,11 @@ public class ApplicationModule {
     @Singleton
     Bus provideBus() {
         return new Bus();
+    }
+
+    @Provides
+    @Singleton
+    Realm provideRealm() {
+        return Realm.getInstance(application);
     }
 }

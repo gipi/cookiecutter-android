@@ -22,12 +22,21 @@ def getEndpoint = { ->
     return url
 }
 
+retrolambda {
+    jvmArgs '-noverify'
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion '23.0.0'
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
-        applicationId 'com.company.templateapplication'
+        applicationId 'br.com.quintoandar.template'
         versionCode 1
         versionName '1.0'
 

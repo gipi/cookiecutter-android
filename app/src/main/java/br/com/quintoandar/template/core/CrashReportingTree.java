@@ -1,4 +1,4 @@
-package com.company.templateapplication.core;
+package br.com.quintoandar.template.core;
 
 import android.util.Log;
 
@@ -6,7 +6,7 @@ import timber.log.Timber;
 
 public class CrashReportingTree extends Timber.Tree {
     @Override
-    protected void log(int priority, String tag, String message, Throwable t) {
+    protected void log(int priority, String tag, String message, Throwable throwable) {
         if (priority == Log.VERBOSE || priority == Log.DEBUG) {
             return;
         }

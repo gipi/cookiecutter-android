@@ -1,0 +1,7 @@
+{
+	"title": "Untitle",
+	"app_name": "{{cookiecutter.title|replace(' ', '')}}App",
+	"organization": "QuintoAndar",
+	"domain_name": "quintoandar.com.br",
+	"package_name": "br.com.quintoandar"
+}

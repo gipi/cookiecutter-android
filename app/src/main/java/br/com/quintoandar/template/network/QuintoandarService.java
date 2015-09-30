@@ -1,9 +1,9 @@
-package com.company.templateapplication.network;
+package br.com.quintoandar.template.network;
 
 import android.app.Application;
 import android.content.Context;
 
-import com.company.templateapplication.BuildConfig;
+import br.com.quintoandar.template.BuildConfig;
 import com.google.gson.GsonBuilder;
 import com.octo.android.robospice.SpiceService;
 import com.octo.android.robospice.networkstate.NetworkStateChecker;
@@ -31,7 +31,7 @@ import retrofit.converter.Converter;
 import retrofit.converter.GsonConverter;
 
 @SuppressWarnings({"rawtypes", "unchecked"})
-public class OrganizationService extends SpiceService {
+public class QuintoandarService extends SpiceService {
 
     public final static String BASE_URL = BuildConfig.ENDPOINT;
 
@@ -51,7 +51,7 @@ public class OrganizationService extends SpiceService {
         builder = createRestAdapterBuilder();
         restAdapter = builder.build();
 
-        addRetrofitInterface(Organization.class);
+        addRetrofitInterface(Quintoandar.class);
     }
 
     @Override
@@ -71,17 +71,17 @@ public class OrganizationService extends SpiceService {
     }
 
     public File getCacheFolder() {
-        return new File(getCacheDir(), OrganizationService.class.getSimpleName());
+        return new File(getCacheDir(), "cache");
     }
 
     protected RestAdapter.Builder createRestAdapterBuilder() {
-        CookieHandler.setDefault(new CookieManager(new OrganizationCookieStore(), CookiePolicy.ACCEPT_ALL));
+        CookieHandler.setDefault(new CookieManager(new QuintoandarCookieStore(), CookiePolicy.ACCEPT_ALL));
 
         OkHttpClient httpClient = new OkHttpClient();
         return new RestAdapter.Builder()
                 .setClient(new OkClient(httpClient))
                 .setEndpoint(getServerUrl())
-                .setRequestInterceptor(new OrganizationRequestInterceptor())
+                .setRequestInterceptor(new QuintoandarRequestInterceptor())
                 .setLogLevel(RestAdapter.LogLevel.HEADERS)
                 .setConverter(getConverter());
     }
