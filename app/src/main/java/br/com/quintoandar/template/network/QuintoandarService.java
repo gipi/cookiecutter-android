@@ -3,7 +3,6 @@ package br.com.quintoandar.template.network;
 import android.app.Application;
 import android.content.Context;
 
-import br.com.quintoandar.template.BuildConfig;
 import com.google.gson.GsonBuilder;
 import com.octo.android.robospice.SpiceService;
 import com.octo.android.robospice.networkstate.NetworkStateChecker;
@@ -25,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import br.com.quintoandar.template.BuildConfig;
 import retrofit.RestAdapter;
 import retrofit.client.OkClient;
 import retrofit.converter.Converter;

@@ -3,14 +3,14 @@ package br.com.quintoandar.template.activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import br.com.quintoandar.template.QuintoandarApplication;
-import br.com.quintoandar.template.R;
-import br.com.quintoandar.template.model.Dummy;
+import com.octo.android.robospice.SpiceManager;
 import com.squareup.otto.Bus;
-import com.squareup.otto.Subscribe;
 
 import javax.inject.Inject;
 
+import br.com.quintoandar.template.QuintoandarApplication;
+import br.com.quintoandar.template.R;
+import br.com.quintoandar.template.model.Dummy;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.realm.Realm;
@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Inject
     Realm realm;
+
+    @Inject
+    SpiceManager spiceManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

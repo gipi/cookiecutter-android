@@ -2,11 +2,13 @@ package br.com.quintoandar.template.di.module;
 
 import android.content.Context;
 
-import br.com.quintoandar.template.QuintoandarApplication;
+import com.octo.android.robospice.SpiceManager;
 import com.squareup.otto.Bus;
 
 import javax.inject.Singleton;
 
+import br.com.quintoandar.template.QuintoandarApplication;
+import br.com.quintoandar.template.network.QuintoandarService;
 import dagger.Module;
 import dagger.Provides;
 import io.realm.Realm;
@@ -36,5 +38,11 @@ public class ApplicationModule {
     @Singleton
     Realm provideRealm() {
         return Realm.getInstance(application);
+    }
+
+    @Provides
+    @Singleton
+    SpiceManager provideSpice() {
+        return new SpiceManager(QuintoandarService.class);
     }
 }
