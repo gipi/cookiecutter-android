@@ -4,12 +4,12 @@ import io.realm.RealmObject;
 import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
-public class Dummy extends RealmObject {
+public class User extends RealmObject {
 
     @PrimaryKey
     private String name;
 
-    private int number;
+    private int age;
 
     @Ignore
     private int dontPersistMe;
@@ -23,11 +23,11 @@ public class Dummy extends RealmObject {
         this.name = name;
     }
 
-    public int getNumber() {
-        return number;
+    public int getAge() {
+        return age;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setAge(int age) {
+        this.age = age;
     }
 }

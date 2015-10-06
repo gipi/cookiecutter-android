@@ -2,16 +2,19 @@ package br.com.quintoandar.template.di.module;
 
 import android.content.Context;
 
-import com.octo.android.robospice.SpiceManager;
 import com.squareup.otto.Bus;
 
 import javax.inject.Singleton;
 
+import br.com.quintoandar.template.BuildConfig;
 import br.com.quintoandar.template.QuintoandarApplication;
 import br.com.quintoandar.template.network.QuintoandarService;
 import dagger.Module;
 import dagger.Provides;
 import io.realm.Realm;
+import retrofit.GsonConverterFactory;
+import retrofit.Retrofit;
+import retrofit.RxJavaCallAdapterFactory;
 
 @Module
 public class ApplicationModule {
@@ -42,7 +45,12 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    SpiceManager provideSpice() {
-        return new SpiceManager(QuintoandarService.class);
+    QuintoandarService provideService() {
+        return new Retrofit.Builder()
+                .baseUrl(BuildConfig.ENDPOINT)
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build()
+                .create(QuintoandarService.class);
     }
 }
