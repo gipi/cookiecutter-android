@@ -1,7 +1,21 @@
 ![Image credits: http://squarerootofpie.com/2012/06/19/googley](cookiecutter.jpg)
 
-### This repository contains the scaffold for all QuintoAndar android applications
+### This repository contains the scaffold for all QuintoAndar Android applications
 
+
+
+
+### Creating providers
+
+### Working with network data
+
+### Database operations
+
+### Injecting views
+
+### Sending events
+
+### Endpoint and Ngrok
 
 
 ```java
