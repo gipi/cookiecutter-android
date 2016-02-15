@@ -1,4 +1,4 @@
-package br.com.quintoandar.template.model;
+package {{ cookiecutter.package_name }}.model;
 
 import io.realm.RealmObject;
 import io.realm.annotations.Ignore;

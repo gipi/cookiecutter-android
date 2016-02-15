@@ -1,4 +1,4 @@
-package br.com.quintoandar.template.envelope;
+package {{ cookiecutter.package_name }}.envelope;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,6 +1,6 @@
-package br.com.quintoandar.template.network;
+package {{ cookiecutter.package_name }}.network;
 
-import br.com.quintoandar.template.envelope.DataEnvelope;
+import {{ cookiecutter.package_name }}.envelope.DataEnvelope;
 import retrofit.http.GET;
 import retrofit.http.Path;
 import rx.Observable;

@@ -1,4 +1,4 @@
-package br.com.quintoandar.template;
+package {{ cookiecutter.package_name }};
 
 import android.app.Application;
 import android.content.Context;
@@ -7,10 +7,10 @@ import android.support.annotation.NonNull;
 import com.orhanobut.hawk.Hawk;
 import com.orhanobut.hawk.HawkBuilder;
 
-import br.com.quintoandar.template.core.CrashReportingTree;
-import br.com.quintoandar.template.di.component.ApplicationComponent;
-import br.com.quintoandar.template.di.component.DaggerApplicationComponent;
-import br.com.quintoandar.template.di.module.ApplicationModule;
+import {{ cookiecutter.package_name }}.core.CrashReportingTree;
+import {{ cookiecutter.package_name }}.di.component.ApplicationComponent;
+import {{ cookiecutter.package_name }}.di.component.DaggerApplicationComponent;
+import {{ cookiecutter.package_name }}.di.module.ApplicationModule;
 import timber.log.Timber;
 import timber.log.Timber.DebugTree;
 

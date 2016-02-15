@@ -1,4 +1,4 @@
-package br.com.quintoandar.template.di.module;
+package {{ cookiecutter.package_name }}.di.module;
 
 import android.content.Context;
 
@@ -6,9 +6,9 @@ import com.squareup.otto.Bus;
 
 import javax.inject.Singleton;
 
-import br.com.quintoandar.template.BuildConfig;
-import br.com.quintoandar.template.QuintoandarApplication;
-import br.com.quintoandar.template.network.QuintoandarService;
+import {{ cookiecutter.package_name }}.BuildConfig;
+import {{ cookiecutter.package_name }}.QuintoandarApplication;
+import {{ cookiecutter.package_name }}.network.QuintoandarService;
 import dagger.Module;
 import dagger.Provides;
 import io.realm.Realm;

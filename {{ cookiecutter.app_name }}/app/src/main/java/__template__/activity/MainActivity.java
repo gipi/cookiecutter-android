@@ -1,4 +1,4 @@
-package br.com.quintoandar.template.activity;
+package {{ cookiecutter.package_name }}.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,10 +8,10 @@ import com.squareup.otto.Subscribe;
 
 import javax.inject.Inject;
 
-import br.com.quintoandar.template.QuintoandarApplication;
-import br.com.quintoandar.template.R;
-import br.com.quintoandar.template.event.SomeEvent;
-import br.com.quintoandar.template.network.QuintoandarService;
+import {{ cookiecutter.package_name }}.QuintoandarApplication;
+import {{ cookiecutter.package_name }}.R;
+import {{ cookiecutter.package_name }}.event.SomeEvent;
+import {{ cookiecutter.package_name }}.network.QuintoandarService;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.realm.Realm;

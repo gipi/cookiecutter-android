@@ -1,9 +1,9 @@
-package br.com.quintoandar.template.di.component;
+package {{ cookiecutter.package_name }}.di.component;
 
 import javax.inject.Singleton;
 
-import br.com.quintoandar.template.activity.MainActivity;
-import br.com.quintoandar.template.di.module.ApplicationModule;
+import {{ cookiecutter.package_name }}.activity.MainActivity;
+import {{ cookiecutter.package_name }}.di.module.ApplicationModule;
 import dagger.Component;
 
 @Singleton

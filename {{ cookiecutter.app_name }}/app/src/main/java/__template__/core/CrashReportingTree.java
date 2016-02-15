@@ -1,4 +1,4 @@
-package br.com.quintoandar.template.core;
+package {{ cookiecutter.package_name }}.core;
 
 import android.util.Log;
 

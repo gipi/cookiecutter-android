@@ -1,4 +1,4 @@
-package br.com.quintoandar.template.event;
+package {{ cookiecutter.package_name }}.event;
 
 public class SomeEvent {
 
