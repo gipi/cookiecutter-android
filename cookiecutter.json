@@ -1,6 +1,6 @@
 {
-	"title": "Untitle",
-	"app_name": "{{cookiecutter.title|replace(' ', '')}}App",
+	"base_name": "BaseName",
+	"app_name": "{{cookiecutter.base_name|replace(' ', '')}}App",
 	"organization": "QuintoAndar",
 	"domain_name": "quintoandar.com.br",
 	"package_name": "br.com.quintoandar"

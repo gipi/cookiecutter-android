@@ -14,7 +14,7 @@ import {{ cookiecutter.package_name }}.di.module.ApplicationModule;
 import timber.log.Timber;
 import timber.log.Timber.DebugTree;
 
-public class QuintoandarApplication extends Application {
+public class {{ cookiecutter.base_name }}Application extends Application {
 
     private ApplicationComponent component;
 
@@ -38,7 +38,7 @@ public class QuintoandarApplication extends Application {
         return component;
     }
 
-    public static QuintoandarApplication from(@NonNull Context context) {
-        return (QuintoandarApplication) context.getApplicationContext();
+    public static {{ cookiecutter.base_name }}Application from(@NonNull Context context) {
+        return ({{ cookiecutter.base_name }}Application) context.getApplicationContext();
     }
 }

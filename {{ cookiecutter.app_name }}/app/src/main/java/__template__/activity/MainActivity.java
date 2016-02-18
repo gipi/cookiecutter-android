@@ -8,10 +8,10 @@ import com.squareup.otto.Subscribe;
 
 import javax.inject.Inject;
 
-import {{ cookiecutter.package_name }}.QuintoandarApplication;
+import {{ cookiecutter.package_name }}.{{ cookiecutter.base_name }}Application;
 import {{ cookiecutter.package_name }}.R;
 import {{ cookiecutter.package_name }}.event.SomeEvent;
-import {{ cookiecutter.package_name }}.network.QuintoandarService;
+import {{ cookiecutter.package_name }}.network.{{ cookiecutter.base_name }}Service;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.realm.Realm;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     Realm realm;
 
     @Inject
-    QuintoandarService quintoandar;
+    {{ cookiecutter.base_name }}Service quintoandar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
-        QuintoandarApplication.from(this).getComponent().inject(this);
+        {{ cookiecutter.base_name }}Application.from(this).getComponent().inject(this);
     }
 
     @Override
