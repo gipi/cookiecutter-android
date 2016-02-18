@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     Realm realm;
 
     @Inject
-    {{ cookiecutter.base_name }}Service quintoandar;
+    {{ cookiecutter.base_name }}Service service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.button)
     protected void onClick() {
-        quintoandar.fetchData(123L)
+        service.fetchData(123L)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
